@@ -1,0 +1,76 @@
+<%- include('partials/header'); -%>
+
+
+<%    if(error==null){ %>
+    <h1><%= student.Name %></h1>
+    <h4>Only fill area to be updated</h4>
+
+    <form action="/updateDatabase" method="post">
+        <table>
+        <tr>
+            <td><label for="Id">Id :</label></td>
+            <td><input type="number" name="Id" /></td>
+        </tr>
+    
+        <tr>
+            <td><label for="Name">Name :</label></td>
+            <td><input type="text" autocomplete="off" name="Name" /></td>
+        </tr>
+    
+        <tr>
+            <td><label for="Age">Age :</label></td>
+            <td><input type="number" autocomplete="off" name="Age" /></td>
+        </tr>
+    
+        <tr>
+            <td><label for="Gender">Gender :</label></td>
+            <td><input type="text" autocomplete="off" name="Gender" /></td>
+        </tr>
+    
+        <tr>
+            <td><label for="Address">Address :</label></td>
+            <td><input type="text" autocomplete="off" name="Address" /></td>
+        </tr>
+    
+        <tr>
+            <td><label for="Company">Company :</label></td>
+            <td><input type="text" autocomplete="off" name="Company" /></td>
+        </tr>
+    
+        <tr>
+            <td><label for="Email">Email :</label></td>
+            <td><input type="email" autocomplete="off" name="Email" /></td>
+        </tr>
+    
+        <tr>
+            <td><label for="Phone">Phone :</label></td>
+            <td><input type="number" autocomplete="off" name="Phone" /></td>
+        </tr>
+    
+        <tr>
+            <td><label for="About">About :</label></td>
+            <td><input type="text" autocomplete="off" name="About" /></td>
+        </tr>
+    
+        <tr>
+            <td><label for="Registered">Registration date & time :</label></td>
+            <td><input type="datetime" autocomplete="off" name="Registered" /></td>
+        </tr>
+    
+        <tr>
+            <td><label for="FavoriteFruit">FavoriteFruit :</label></td>
+            <td><input type="text" autocomplete="off" name="FavoriteFruit" /></td>
+        </tr>
+    
+        <tr>
+            <td></td>
+            <td><button class="btn btn-md btn-light btn-outline" type="submit">Update details</button></td>
+        </tr>
+        </table>
+        <input type="hidden" name="studentId" value=<%= Id %> >
+    </form>
+<%    }else{ %>
+    <h1>Oops! Student requested to update does not exist!!</h1>
+    <%    } %>
+
+<%- include('partials/footer'); -%>
