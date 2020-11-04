@@ -1,0 +1,13 @@
+<%- include('partials/header'); -%>
+
+<%    if(error==null){ %>
+        <h1><%= student.Name %></h1>
+        <% for(var key in student){  %>
+        <%    if(student.hasOwnProperty(key)&&key!="Name"){  %>
+        <h4><%= key %>: <%= student[key] %></h4>
+<%    }}; %>
+<%    }else{ %>
+        <h1>Oops! Student requested does not exist!!</h1>
+        <%    } %>
+
+<%- include('partials/footer'); -%>
