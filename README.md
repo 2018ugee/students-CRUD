@@ -11,3 +11,5 @@
 ### Go to `/update/<id>` To update student with particular ID.
 
 ### Go to `/delete/<id>` To delete student with particular ID from list.
+
+### info.log file has logged request and response.
